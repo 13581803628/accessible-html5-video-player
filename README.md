@@ -2,7 +2,7 @@
 
 # 无障碍HTML5视频播放器
 
-##由PayPal辅助功能团队研发
+## 由PayPal辅助功能团队研发
 详情参考下面的 [作者](#作者) 部分。
 
 ## 这是什么？
@@ -71,7 +71,7 @@ new InitPxVideo({
 </script>
 ```
 
-##在线演示
+## 在线演示
 [查看演示](http://paypal.github.io/accessible-html5-video-player/)
 
 ## 反馈和贡献
