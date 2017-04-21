@@ -2,34 +2,32 @@
 
 # 无障碍HTML5视频播放器
 
-##由PayPal无障碍团队研发
+##由PayPal辅助功能团队研发
 详情参考下面的 [作者](#作者) 部分。
 
 ## 这是什么？
-A lightweight HTML5 video player which includes support for captions and screen reader accessibility. For details, read the blog post [Introducing an Accessible HTML5 Video Player](https://www.paypal-engineering.com/2014/09/05/introducing-an-accessible-html5-video-player/) on the PayPal Engineering blog.
+一个轻量级的HTML5视频播放器，包括支持字幕和屏幕阅读器的辅助功能。有关详细信息，请在PayPal工程博客上阅读博文[无障碍HTML5视频播放器介绍](https://www.paypal-engineering.com/2014/09/05/introducing-an-accessible-html5-video-player/)。
 
 ## 特征
-- Provides an HTML5 video player with custom controls.
-- Supports captions; simply denote a VTT caption file using the standard HTML5 video syntax.
-- Uses native HTML5 form controls for volume (range input) and progress indication (progress element).
-- Accessible to keyboard-only users and screen reader users.
-- Option provided to set captions on or off by default (upon loading).
-- Option provided to set number of seconds by which to rewind and forward.
-- Text strings for the controls are externalized to allow for internationalization (fall 2015).
-- No dependencies. Written in "vanilla" JavaScript.
-- When JavaScript is unavailable, the browser's native controls are used.
-
+- 提供具有自定义控件的HTML5视频播放器。
+- 支持字幕；简单地载入使用标准HTML5视频语法的VTT字幕文件。
+- 使用本地HTML5形式的控件来控制音量（`range`类型的`<iput>`标签）和进度条（progress元素）。
+- 适用于键盘用户和触幕用户。
+- 默认设置字幕开启或关闭的选项（加载时）。
+- 提供选项来设置回退和快进的秒数。
+- 控件的文本字符串被扩展以允许标准化（2015年秋季标准）。
+- 没有依赖库。使用 "vanilla" JavaScript 编写。
+- 当JavaScript不可用时，将使用浏览器的本地控件。
 ## 实现
 
 ### CSS 和 图像
-Insert the CSS in the Head of your HTML document. You'll also need to upload the sprite image (or use your own) and adjust the path in the CSS file.
-
+将CSS文件引入你的HTML页面的document文件头中。您还需要上传精灵图像（或使用自己的图像）并调整CSS文件中的路径。
 ```html
 <link rel="stylesheet" href="/css/px-video.css" />
 ```
 
 ### HTML
-Insert the HTML5 video markup in the Body of your HTML document. Replace the video, poster, and caption URLs. Modify the sizes of video and fallback image as needed.
+在你的HTML5页面的document的文件体中插入视频标签（`<video>`）。替换视频，海报和标题url地址。根据需要修改视频和封面图像的大小。
 ```html
 <div class="px-video-container" id="myvid">
 	<div class="px-video-img-captions-container">
@@ -50,19 +48,19 @@ Insert the HTML5 video markup in the Body of your HTML document. Replace the vid
 ```
 
 ### JavaScript
-Insert two JavaScript files right before the closing Body element of your HTML document. Add a Script element to initialize the video. Options are passed in JSON format. The options are:
+在你的HTML页面document文件体闭合之前（即，在`</body>`之前）引入两个JavaScript文件。添加一个Script标签元素来初始化视频，参数以JSON的形式传进去，参数有：
 
-- videoId: the value of the ID of the widget container (string) [required]
-- captionsOnDefault: denotes whether to show or hide caption upon loading (boolean) [optional, default is true]
-- seekInterval: the number of seconds to rewind and fast forward (whole number) [optional, default is 10]
-- videoTitle: short title of video; used for aria-label attribute on Play button to clarify to screen reader user what will be played (text) [optional, default is "Play"]
-- debug: turn console logs on or off (boolean) [optional, default is false]
+- videoId: 部件容器的ID值（字符串类型）[必须]
+- captionsOnDefault: 表示加载时是否显示或隐藏字幕（布尔类型）[可选，默认值为true]
+- seekInterval: 快进和回退的秒数（整数类型）[可选，默认值为10]
+- videoTitle: 视频的简称；用于Play按钮上aria-label属性，向触屏用户阐明将要播放的内容（文本类型[可选，默认值为"Play"]
+- debug: 打开或关闭控制台日志（布尔类型）[可选，默认值为false]
 
 ```html
 <script src="js/strings.js"></script>
 <script src="js/px-video.js"></script>
 <script>
-// Initialize
+// 初始化
 new InitPxVideo({
 	"videoId": "myvid",
 	"captionsOnDefault": true,
@@ -74,42 +72,42 @@ new InitPxVideo({
 ```
 
 ##在线演示
-[View Demo](http://paypal.github.io/accessible-html5-video-player/)
+[查看演示](http://paypal.github.io/accessible-html5-video-player/)
 
 ## 反馈和贡献
-If you experience any errors or if you have ideas for improvement, please feel free to open an issue or send a pull request.
+如果您遇到任何错误，或者您有改进想法，请随时打开问题页面或发送pull请求。
 
-You can also follow and contact the PayPal Accessibility team on Twitter: [@PayPalInclusive](https://twitter.com/paypalinclusive)
+您也可以通过Twitter联系PayPal辅助功能团队：[@PayPalInclusive](https://twitter.com/paypalinclusive)
 
 ## 作者
-The original authors of this project are:
-- Dennis Lembree, primary developer || [https://github.com/weboverhauls](https://github.com/weboverhauls) || [@dennisl](https://twitter.com/dennisl)
-- Victor Tsaran, consultation and testing || [https://github.com/vick08](https://github.com/vick08) || [@vick08](https://twitter.com/vick08)
-- Jason Gabriele, consultation
-- Tim Resudek, design
+本项目的最初作者有：
+- 丹尼斯·布里，主要开发者 || [https://github.com/weboverhauls](https://github.com/weboverhauls) || [@dennisl](https://twitter.com/dennisl)
+- 维克托·萨拉伦，咨询和测试 || [https://github.com/vick08](https://github.com/vick08) || [@vick08](https://twitter.com/vick08)
+- 杰森·加布里埃勒, 谘询专家
+- 蒂姆·瑞修蒂克, 设计师
 
 ## 浏览器支持
-- Chrome: full support.
-- Safari: full support.
-- Firefox: full support.
-- Internet Explorer 10, 11: full support.
-- Internet Explorer 9: native video player used (aesthetic choice since HTML5 range input and progress element are not supported).
-- Internet Explorer 8: renders fallback content of video element (in the demo, this is an image linked to the video file).
-- Smartphones and tablets: controls and captions are not customized as both are natively supported in latest versions.
+- Chrome：完全支持。
+- Safari：完全支持。
+- Firefox：完全支持。
+- Internet Explorer 10, 11：完全支持。
+- Internet Explorer 9：使用本地视频播放器（美学选择，因为不支持HTML5`range`类型的`<iput>`标签和progress进度元素的审美选择）。
+- Internet Explorer 8：渲染视频元素的后退内容（在演示中，这是与视频文件链接的图像）。
+- 智能手机和平板电脑： 控件和字幕不是自定义的，因为在最新版本中都是本地支持的。
 
 ## 限制和已知问题
-- Currently, only one caption file per video is supported.
-- Only VTT caption files are supported (not SRT nor TTML). VTT cue settings are not supported but inline styles function (see first few lines of example).
-- The controls have a minimum width of 360px.
+- 目前，每个视频只支持一个字幕文件。
+- 只支持VTT字幕文件（不是SRT或TTML）。不支持VTT提示设置，而是内联样式功能（参见前几行的例子）。
+- 控件的最小宽度为360px。
 
 ## 相关资源
-- [HTML5 Video Events and API](http://www.w3.org/2010/05/video/mediaevents.html) - by W3C
-- [Adding captions and subtitles to HTML5 video](https://developer.mozilla.org/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video#Internet_Explorer) - by MDN
-- [Simple SubRip to WebVTT converter](https://atelier.u-sub.net/srt2vtt/) - tool to convert SRT captions to WebVTT
-- [Able Player](https://github.com/ableplayer/ableplayer) - accessible cross-browser media player by Terrill Thompson
+- [HTML5视频事件和API](http://www.w3.org/2010/05/video/mediaevents.html) - by W3C
+- [在HTML5视频中添加字幕和字幕](https://developer.mozilla.org/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video#Internet_Explorer) - by MDN
+- [简单的SubRip到WebVTT转换器](https://atelier.u-sub.net/srt2vtt/) - tool to convert SRT captions to WebVTT
+- [Able 播放器](https://github.com/ableplayer/ableplayer) - accessible cross-browser media player by Terrill Thompson
 
 ### 受PayPal无障碍HTML5视频播放器影响的项目
-- [Universal Video Player](https://source.ind.ie/project/video-player) - by Ind.ie, @LauraKalbag
+- [通用视频播放器](https://source.ind.ie/project/video-player) - by Ind.ie, @LauraKalbag
 - [Plyr](https://github.com/selz/plyr) - by @sam_potts, @selz
 
 ## 版权和许可证
