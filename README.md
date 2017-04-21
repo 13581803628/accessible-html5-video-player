@@ -1,14 +1,14 @@
 <img src="images/logo_347x50_PPa11y.png" width="347" height="50" alt="PayPal accessibility logo" />
 
-# Accessible HTML5 Video Player
+# 无障碍HTML5视频播放器
 
-## by the PayPal Accessibility Team
-See the [Authors](#authors) section below for details.
+##由PayPal无障碍团队研发
+详情参考下面的 [作者](#作者) 部分。
 
-## What is it?
+## 这是什么？
 A lightweight HTML5 video player which includes support for captions and screen reader accessibility. For details, read the blog post [Introducing an Accessible HTML5 Video Player](https://www.paypal-engineering.com/2014/09/05/introducing-an-accessible-html5-video-player/) on the PayPal Engineering blog.
 
-## Features
+## 特征
 - Provides an HTML5 video player with custom controls.
 - Supports captions; simply denote a VTT caption file using the standard HTML5 video syntax.
 - Uses native HTML5 form controls for volume (range input) and progress indication (progress element).
@@ -19,9 +19,9 @@ A lightweight HTML5 video player which includes support for captions and screen 
 - No dependencies. Written in "vanilla" JavaScript.
 - When JavaScript is unavailable, the browser's native controls are used.
 
-## Implementation
+## 实现
 
-### CSS and Image
+### CSS 和 图像
 Insert the CSS in the Head of your HTML document. You'll also need to upload the sprite image (or use your own) and adjust the path in the CSS file.
 
 ```html
@@ -73,22 +73,22 @@ new InitPxVideo({
 </script>
 ```
 
-## Live Demo
+##在线演示
 [View Demo](http://paypal.github.io/accessible-html5-video-player/)
 
-## Feedback and Contributions
+## 反馈和贡献
 If you experience any errors or if you have ideas for improvement, please feel free to open an issue or send a pull request.
 
 You can also follow and contact the PayPal Accessibility team on Twitter: [@PayPalInclusive](https://twitter.com/paypalinclusive)
 
-## Authors
+## 作者
 The original authors of this project are:
 - Dennis Lembree, primary developer || [https://github.com/weboverhauls](https://github.com/weboverhauls) || [@dennisl](https://twitter.com/dennisl)
 - Victor Tsaran, consultation and testing || [https://github.com/vick08](https://github.com/vick08) || [@vick08](https://twitter.com/vick08)
 - Jason Gabriele, consultation
 - Tim Resudek, design
 
-## Browser Support
+## 浏览器支持
 - Chrome: full support.
 - Safari: full support.
 - Firefox: full support.
@@ -97,21 +97,21 @@ The original authors of this project are:
 - Internet Explorer 8: renders fallback content of video element (in the demo, this is an image linked to the video file).
 - Smartphones and tablets: controls and captions are not customized as both are natively supported in latest versions.
 
-## Limitations and Known Issues
+## 限制和已知问题
 - Currently, only one caption file per video is supported.
 - Only VTT caption files are supported (not SRT nor TTML). VTT cue settings are not supported but inline styles function (see first few lines of example).
 - The controls have a minimum width of 360px.
 
-## Related Resources
+## 相关资源
 - [HTML5 Video Events and API](http://www.w3.org/2010/05/video/mediaevents.html) - by W3C
 - [Adding captions and subtitles to HTML5 video](https://developer.mozilla.org/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video#Internet_Explorer) - by MDN
 - [Simple SubRip to WebVTT converter](https://atelier.u-sub.net/srt2vtt/) - tool to convert SRT captions to WebVTT
 - [Able Player](https://github.com/ableplayer/ableplayer) - accessible cross-browser media player by Terrill Thompson
 
-### Projects influenced by the PayPal Accessible HTML5 Video Player
+### 受PayPal无障碍HTML5视频播放器影响的项目
 - [Universal Video Player](https://source.ind.ie/project/video-player) - by Ind.ie, @LauraKalbag
 - [Plyr](https://github.com/selz/plyr) - by @sam_potts, @selz
 
-## Copyright and License
+## 版权和许可证
 Copyright 2014, PayPal under [the BSD license](LICENSE.md).
 
