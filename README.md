@@ -101,10 +101,10 @@ new InitPxVideo({
 - 控件的最小宽度为360px。
 
 ## 相关资源
-- [HTML5视频事件和API](http://www.w3.org/2010/05/video/mediaevents.html) - by W3C
-- [在HTML5视频中添加字幕和字幕](https://developer.mozilla.org/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video#Internet_Explorer) - by MDN
-- [简单的SubRip到WebVTT转换器](https://atelier.u-sub.net/srt2vtt/) - tool to convert SRT captions to WebVTT
-- [Able 播放器](https://github.com/ableplayer/ableplayer) - accessible cross-browser media player by Terrill Thompson
+- [HTML5视频事件和API](http://www.w3.org/2010/05/video/mediaevents.html) - 由W3C制作
+- [在HTML5视频中添加字幕和字幕](https://developer.mozilla.org/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video#Internet_Explorer) - 由MDN制作
+- [简单的SubRip到WebVTT转换器](https://atelier.u-sub.net/srt2vtt/) - 将SRT字幕转换为WebVTT的工具
+- [Able 播放器](https://github.com/ableplayer/ableplayer) - Terrill Thompson研发的可访问跨浏览器媒体播放器
 
 ### 受PayPal无障碍HTML5视频播放器影响的项目
 - [通用视频播放器](https://source.ind.ie/project/video-player) - by Ind.ie, @LauraKalbag
